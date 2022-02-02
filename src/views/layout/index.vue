@@ -30,9 +30,9 @@
         <p style="margin-bottom: 0;">
           <n-tooltip :width="600" placement="right">
               <template #trigger>
-                <a style="color: #306eff;" target="_blank" href="https://k.youshop10.com/JGDtoxg6">2021年12月23日~2021年12月31日￥119购体验会员VIP年卡</a>
+                <a style="color: #306eff;" target="_blank" href="https://k.youshop10del.com/JGDtoxg6">体验会员VIP年卡</a>
               </template>
-              2021年12月23日~2021年12月31日 【1年PikPak体验会员仅售：119元！原价450元】 2022年1月1日起： 1年PikPak体验会员仅售：169元！原价450元】 -每人只能购买使用一次，官方代理商分销，感谢支持
+              yx，感谢支持
           </n-tooltip>
         </p>
       </div>
@@ -90,7 +90,7 @@
 import { ref } from '@vue/reactivity';
 import { h, onMounted, watch } from '@vue/runtime-core';
 import { NLayout, NLayoutSider, NLayoutContent, NMenu, MenuOption, NIcon, NProgress, NText, NModal, NCard, NInput, NButton, NScrollbar, NTime, NTooltip, useDialog } from 'naive-ui'
-import { File, Trash, CircleX, Logout, Settings, Copy, Video, Camera } from '@vicons/tabler'
+import { File, Trash, CircleX, Logout, Settings, Share, Copy, Video, Camera } from '@vicons/tabler'
 import http from '../../utils/axios'
 import { byteConvert } from '../../utils'
 import { useRoute, useRouter } from 'vue-router'
@@ -127,10 +127,10 @@ import { useRoute, useRouter } from 'vue-router'
       icon: renderIcon(Copy)
     },
     {
-       label: '资源库',
+      label: '资源库',
       key: 'share',
       icon: renderIcon(Share)
-     },
+    },
     {
       label: '设置',
       key: 'setting',
