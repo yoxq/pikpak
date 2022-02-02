@@ -51,6 +51,18 @@ const getList = () => {
     list.value = list.value.concat(res.data.results)
     nextCursor.value = res.data.has_more && res.data.next_cursor
     if(columns.value.length == 0) {
+      columns.value.push({
+        title: '操作',
+        key: 'action',
+        width: 80,
+        align: 'right',
+        render: (row:any) => h(NText, {
+          type: 'primary',
+          onClick: () => {
+            addUrl(row.properties['链接'].rich_text[0].plain_text)
+          }
+        }, {default: () => '保存'})
+      })      
       if(list.value.length) {
         for(let k in list.value[0].properties) {
           if(k !== '发布人' && k !== '发布日期' && k !== '分类' && k !== '标签') {
@@ -93,18 +105,6 @@ const getList = () => {
           }
         }
       }
-      columns.value.push({
-        title: '操作',
-        key: 'action',
-        width: 80,
-        align: 'right',
-        render: (row:any) => h(NText, {
-          type: 'primary',
-          onClick: () => {
-            addUrl(row.properties['链接'].rich_text[0].plain_text)
-          }
-        }, {default: () => '保存'})
-      })
     }
   })
 }
